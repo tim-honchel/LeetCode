@@ -46,6 +46,16 @@
         "build": {
           "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
         }
+      },
+      "ClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary.dll": {}
+        }
       }
     }
   },
@@ -243,10 +253,16 @@
         "nunit3testadapter.4.0.0.nupkg.sha512",
         "nunit3testadapter.nuspec"
       ]
+    },
+    "ClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary/ClassLibrary.csproj",
+      "msbuildProject": "../ClassLibrary/ClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ClassLibrary >= 1.0.0",
       "NUnit >= 3.13.0",
       "NUnit3TestAdapter >= 4.0.0"
     ]
@@ -277,7 +293,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\timho\\Documents\\repos\\LeetCode\\ClassLibrary\\ClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\timho\\Documents\\repos\\LeetCode\\ClassLibrary\\ClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

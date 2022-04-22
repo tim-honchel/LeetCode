@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using LeetCode;
+using Shared;
 
 namespace LeetCodeTest
 {
@@ -19,5 +20,14 @@ namespace LeetCodeTest
             Assert.AreEqual(expected, actual);
                 
         }
+
+        [TestCase]
+        public void AddTwoNumbersTest(Shared.Library.ListNode input1, Shared.Library.ListNode input2, Shared.Library.ListNode expected)
+        {
+            var test = new Challenge();
+            var actual = test.AddTwoNumbers(input1, input2);
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

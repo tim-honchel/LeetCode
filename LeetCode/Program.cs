@@ -1,4 +1,6 @@
 ﻿using System;
+using Shared;
+using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -19,6 +21,44 @@ namespace LeetCode
                 }
             }
             return answer;
+        }
+
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+           public ListNode(int val = 0, ListNode next = null)
+            {
+                this.val = val;
+                this.next = next;
+            }
+        }
+
+        public Shared.Library.ListNode AddTwoNumbers(Shared.Library.ListNode l1, Shared.Library.ListNode l2) // #2
+        {
+            return new Shared.Library.ListNode();
+        }
+
+        public int LengthOfLongestSubstring(string s)
+        {
+            var currentString = "";
+            var maxLength = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (currentString.Contains(s[i].ToString()) || s[i] == s.Length)
+                {
+                    if (currentString.Length > maxLength)
+                    {
+                        maxLength = currentString.Length;
+                    }
+                    currentString = currentString.Split(s[i])[1] + s[i].ToString();
+                }
+                else
+                {
+                    currentString += s[i].ToString();
+                }
+            }
+            return maxLength;
         }
 
         static void Main(string[] args)
