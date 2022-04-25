@@ -22,3 +22,5 @@ C:\Users\timho\Documents\repos\LeetCode\LeetCode\obj\Debug\net5.0\LeetCode.dll
 C:\Users\timho\Documents\repos\LeetCode\LeetCode\obj\Debug\net5.0\ref\LeetCode.dll
 C:\Users\timho\Documents\repos\LeetCode\LeetCode\obj\Debug\net5.0\LeetCode.pdb
 C:\Users\timho\Documents\repos\LeetCode\LeetCode\obj\Debug\net5.0\LeetCode.genruntimeconfig.cache
+C:\Users\timho\Documents\repos\LeetCode\LeetCode\bin\Debug\net5.0\ClassLibrary.dll
+C:\Users\timho\Documents\repos\LeetCode\LeetCode\bin\Debug\net5.0\ClassLibrary.pdb

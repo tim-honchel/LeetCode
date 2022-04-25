@@ -1,6 +1,7 @@
 ﻿using System;
 using Shared;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LeetCode
 {
@@ -39,19 +40,28 @@ namespace LeetCode
             return new Shared.Library.ListNode();
         }
 
-        public int LengthOfLongestSubstring(string s)
+        public int LengthOfLongestSubstring(string s) // # 3
         {
             var currentString = "";
             var maxLength = 0;
             for (int i = 0; i < s.Length; i++)
             {
-                if (currentString.Contains(s[i].ToString()) || s[i] == s.Length)
+                if (currentString.Contains(s[i].ToString()))
                 {
                     if (currentString.Length > maxLength)
                     {
                         maxLength = currentString.Length;
                     }
+
                     currentString = currentString.Split(s[i])[1] + s[i].ToString();
+                }
+                else if (i == s.Length - 1)
+                {
+                    currentString += s[i].ToString();
+                    if (currentString.Length > maxLength)
+                    {
+                        maxLength = currentString.Length;
+                    }
                 }
                 else
                 {
@@ -61,9 +71,36 @@ namespace LeetCode
             return maxLength;
         }
 
+        public static double FindMedianSortedArrays(int[] nums1, int[] nums2) // # 4
+        {
+            var combined = nums1.Concat(nums2).OrderBy(x => x).ToArray();
+            foreach(int num in combined)
+            {
+                Console.WriteLine(num);
+            }
+            double medianIndex = Convert.ToDouble(combined.Count()) / 2;
+            Console.WriteLine($"median index: {medianIndex}");
+            double median;
+            if (combined.Count() % 2 == 0)
+            {
+                Console.WriteLine("even");
+                median = (combined[Convert.ToInt32(medianIndex - 1)] + combined[Convert.ToInt32(medianIndex)]) / 2.0;
+            }
+            else
+            {
+                Console.WriteLine("odd");
+                median = combined[Convert.ToInt32(medianIndex-0.5)];
+            }
+            return median;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var test1 = new int[] { 1, 4 };
+            var test2 = new int[] { 3, 2 };
+            var answer = FindMedianSortedArrays(test1, test2);
+            Console.WriteLine(answer);
+            Console.ReadKey();
         }
     }
 }
