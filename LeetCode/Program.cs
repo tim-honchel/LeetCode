@@ -94,11 +94,34 @@ namespace LeetCode
             return median;
         }
 
+        public static string LongestPalindrome(string s)
+        {
+            for (int length = s.Length; length > 0; length--)
+            {
+                for (int start = 0; start < s.Length; start++)
+                {
+                    if (start + length > s.Length)
+                    {
+                        break;
+                    }
+                    var substring = s.Substring(start, length);
+                    char[] chars = substring.ToCharArray();
+                    Array.Reverse(chars);
+                    var reverse = new string(chars);
+                    Console.WriteLine(substring);
+                    if (substring == reverse)
+                    {
+                        return substring;
+                    }
+                }
+            }
+            return "";
+        }
+
         static void Main(string[] args)
         {
-            var test1 = new int[] { 1, 4 };
-            var test2 = new int[] { 3, 2 };
-            var answer = FindMedianSortedArrays(test1, test2);
+            var test1 = "aacdefcaa";
+            var answer = LongestPalindrome(test1);
             Console.WriteLine(answer);
             Console.ReadKey();
         }
