@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9e99ffd8-73d0-412a-8110-f4321631ccf1": {
+      "ProjectGuid": "9e99ffd8-73d0-412a-8110-f4321631ccf1",
+      "DisplayName": "LeetCode",
+      "ColorIndex": 0
+    },
+    "4b13478d-7879-4190-ba77-ef3b54d0ee71": {
+      "ProjectGuid": "4b13478d-7879-4190-ba77-ef3b54d0ee71",
+      "DisplayName": "LeetCodeTest",
+      "ColorIndex": 1
+    },
+    "cb75eb00-46ab-40ca-ad4a-32448367d00b": {
+      "ProjectGuid": "cb75eb00-46ab-40ca-ad4a-32448367d00b",
+      "DisplayName": "ClassLibrary",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
