@@ -204,11 +204,34 @@ namespace LeetCode
             }
             return answer;
         }
+        public static int Reverse(int x)
+        {
+            var stringify = Math.Abs(x).ToString().ToCharArray();
+            var answer = 0;
+            var place = 1;
+            var digit = 0;
+            foreach (char c in stringify)
+            {
+
+                digit = Convert.ToInt32(char.GetNumericValue(c));
+                if (place > 1000000000 || answer > 2147483647 || (place == 100000000 && digit > 2))
+                {
+                    return 0;
+                }
+                if (c != '0' || place != 1)
+                {
+                    answer += digit * place;
+                    Console.WriteLine($"{c}*{place}={digit * place} => {answer}");
+                    place *= 10;
+                }
+            }
+            return x < 0 ? answer * -1: answer;
+        }
 
         static void Main(string[] args)
         {
-            var test1 = 4300;
-            var answer = ZigZagConvert("PAYPALISHIRING", 3);
+            var test1 = -2147483648;
+            var answer = Reverse(test1);
             Console.WriteLine(answer);
             Console.ReadKey();
         }
