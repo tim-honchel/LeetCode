@@ -175,6 +175,92 @@ namespace LeetCode
             
         }
 
+        public static int RomanToInt(string roman)
+        {
+            var sum = 0;
+            string? lastDigit = null;
+            string? lastTwoDigits = null;
+            Console.WriteLine(roman);
+            while (roman.Length > 0)
+            {
+                lastDigit = roman[roman.Length - 1].ToString();
+                if (lastDigit == "I")
+                {
+                    sum++;
+                    roman = roman.Substring(0, roman.Length - 1);
+                }
+                else
+                {
+                    lastTwoDigits = roman.Length > 1 ? roman.Substring(roman.Length - 2, 2) : lastDigit;
+                    if (lastTwoDigits == "IV")
+                    {
+                        sum += 4;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastTwoDigits == "IX")
+                    {
+                        sum += 9;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastTwoDigits == "XL")
+                    {
+                        sum += 40;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastTwoDigits == "XC")
+                    {
+                        sum += 90;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastTwoDigits == "CD")
+                    {
+                        sum += 400;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastTwoDigits == "CM")
+                    {
+                        sum += 900;
+                        roman = roman.Substring(0, roman.Length - 2);
+                    }
+                    else if (lastDigit == "V")
+                    {
+                        sum += 5;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                    else if (lastDigit == "X")
+                    {
+                        sum += 10;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                    else if (lastDigit == "L")
+                    {
+                        sum += 50;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                    else if (lastDigit == "C")
+                    {
+                        sum += 100;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                    else if (lastDigit == "D")
+                    {
+                        sum += 500;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                    else if (lastDigit == "M")
+                    {
+                        sum += 1000;
+                        roman = roman.Substring(0, roman.Length - 1);
+                    }
+                }
+                
+                
+                Console.WriteLine(roman);
+            }
+
+            return sum;
+        }
+
         public static string ZigZagConvert(string s, int numRows)
         {
             if (numRows == 1)
@@ -228,10 +314,12 @@ namespace LeetCode
             return x < 0 ? answer * -1: answer;
         }
 
+
+
         static void Main(string[] args)
         {
-            var test1 = -2147483648;
-            var answer = Reverse(test1);
+            var test1 = "LVII";
+            var answer = RomanToInt(test1);
             Console.WriteLine(answer);
             Console.ReadKey();
         }
