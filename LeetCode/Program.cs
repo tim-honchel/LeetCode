@@ -314,12 +314,36 @@ namespace LeetCode
             return x < 0 ? answer * -1: answer;
         }
 
+        public static string LongestCommonPrefix(string[] strs)
+        {
+            var digitsInShortestWord = strs.OrderBy(x => x.Length).FirstOrDefault().Length;
+            var oldPrefixReference = "";
+            var newPrefixReference = "";
+            var answer = "";
+            for (int digits = 1; digits <= digitsInShortestWord; digits++)
+            {
+                oldPrefixReference = newPrefixReference;
+                newPrefixReference = strs[0].Substring(0, digits);
+                foreach (string word in strs)
+                {
+                    if (word.Substring(0, digits) != newPrefixReference)
+                    {
+                        answer = oldPrefixReference;
+                        Console.WriteLine($"break: {newPrefixReference}");
+                        return answer;
+                    }
+                }
+                Console.WriteLine($"continue: {newPrefixReference}");
+                answer = newPrefixReference;
+            }
+            return answer;
+        }
 
 
         static void Main(string[] args)
         {
-            var test1 = "LVII";
-            var answer = RomanToInt(test1);
+            var test1 = new string[] { "flower", "flow", "flight" };
+            var answer = LongestCommonPrefix(test1);
             Console.WriteLine(answer);
             Console.ReadKey();
         }

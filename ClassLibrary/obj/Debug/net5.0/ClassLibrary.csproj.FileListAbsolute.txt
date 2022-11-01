@@ -1,6 +1,5 @@
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\bin\Debug\net5.0\ClassLibrary.deps.json
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\bin\Debug\net5.0\ClassLibrary.dll
-C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\bin\Debug\net5.0\ref\ClassLibrary.dll
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\bin\Debug\net5.0\ClassLibrary.pdb
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ClassLibrary.csproj.AssemblyReference.cache
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
@@ -10,3 +9,4 @@ C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ClassLibra
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ClassLibrary.dll
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ref\ClassLibrary.dll
 C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\ClassLibrary.pdb
+C:\Users\timho\Documents\repos\LeetCode\ClassLibrary\obj\Debug\net5.0\refint\ClassLibrary.dll

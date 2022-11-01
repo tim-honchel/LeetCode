@@ -16,7 +16,6 @@ C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\LeetCodeTe
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\LeetCodeTest.runtimeconfig.json
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\LeetCodeTest.runtimeconfig.dev.json
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\LeetCodeTest.dll
-C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\ref\LeetCodeTest.dll
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\LeetCodeTest.pdb
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
@@ -105,3 +104,6 @@ C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\obj\Debug\net5.0\LeetCodeTe
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\obj\Debug\net5.0\ref\LeetCodeTest.dll
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\obj\Debug\net5.0\LeetCodeTest.pdb
 C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\obj\Debug\net5.0\LeetCodeTest.genruntimeconfig.cache
+C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\ClassLibrary.dll
+C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\bin\Debug\net5.0\ClassLibrary.pdb
+C:\Users\timho\Documents\repos\LeetCode\LeetCodeTest\obj\Debug\net5.0\refint\LeetCodeTest.dll

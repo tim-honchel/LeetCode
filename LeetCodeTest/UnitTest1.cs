@@ -29,5 +29,13 @@ namespace LeetCodeTest
             Assert.AreEqual(expected, actual);
         }
 
+        //[TestCase(new string[] { "flower", "flow", "flight" },"fl")]
+        //public void LongestCommonPrefixTest(string[] input, string expected)
+        //{
+        //    var test = new Challenge();
+        //    var actual = test.LongestCommonPrefix(input);
+        //    Assert.AreEqual(expected, actual);
+        //}
+
     }
 }
